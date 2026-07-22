@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<article class="recipe">
+  <header class="recipe-header">
+    <h1 class="recipe-title">{{ page.title }}</h1>
+
+    <div class="recipe-meta">
+      {% if page.rating %}
+      <span class="recipe-rating" aria-label="Rated {{ page.rating }} out of 5 stars">
+        {% for i in (1..5) %}
+          {% if i <= page.rating %}★{% else %}☆{% endif %}
+        {% endfor %}
+      </span>
+      {% endif %}
+
+      {% if page.categories %}
+      <span class="chip-group">
+        {% for cat in page.categories %}
+          <a class="chip chip--category" href="{{ '/categories/' | append: cat | slugify | relative_url }}/">{{ cat }}</a>
+        {% endfor %}
+      </span>
+      {% endif %}
+
+      {% if page.tags %}
+      <span class="chip-group">
+        {% for tag in page.tags %}
+          <a class="chip chip--tag" href="{{ '/tags/' | append: tag | slugify | relative_url }}/">{{ tag }}</a>
+        {% endfor %}
+      </span>
+      {% endif %}
+    </div>
+
+    {% if page.description %}
+    <p class="recipe-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <div class="recipe-body">
+    {{ content }}
+  </div>
+</article>

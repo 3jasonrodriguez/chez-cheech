@@ -1,0 +1,29 @@
+<a class="recipe-card" href="{{ recipe.url | relative_url }}"
+   data-title="{{ recipe.title | downcase }}"
+   data-tags="{{ recipe.tags | join: ' ' | downcase }}"
+   data-categories="{{ recipe.categories | join: ' ' | downcase }}">
+  <div class="recipe-card__image">
+    {% if recipe.image %}
+      <img src="{{ recipe.image | relative_url }}" alt="{{ recipe.title }}">
+    {% else %}
+      <span class="recipe-card__icon" aria-hidden="true">🍲</span>
+    {% endif %}
+  </div>
+
+  <div class="recipe-card__body">
+    <h3 class="recipe-card__title">{{ recipe.title }}</h3>
+
+    {% if recipe.rating %}
+    <span class="recipe-card__rating" aria-label="Rated {{ recipe.rating }} out of 5 stars">
+      {% for i in (1..5) %}
+        {% if i <= recipe.rating %}★{% else %}☆{% endif %}
+      {% endfor %}
+    </span>
+    {% endif %}
+
+    <div class="recipe-card__chips">
+      {% for cat in recipe.categories %}<span class="chip chip--category">{{ cat }}</span>{% endfor %}
+      {% for tag in recipe.tags %}<span class="chip chip--tag">{{ tag }}</span>{% endfor %}
+    </div>
+  </div>
+</a>

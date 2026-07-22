@@ -1,0 +1,38 @@
+title: Jason's Recipe Box
+description: A working archive of tested recipes — ratings, notes, and what changed each time.
+url: "" # fill in once you know your GitHub Pages URL, e.g. https://<username>.github.io
+baseurl: "" # leave blank if using a user/org site (username.github.io); set to "/reponame" if using a project site
+
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "mint" # other options: default, air, aqua, contrast, dark, dirt, neon, plum, sunrise
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# Recipes collection — this is where every recipe file lives
+collections:
+  recipes:
+    output: true
+    permalink: /recipes/:path/
+
+# Default front matter applied to every recipe automatically
+defaults:
+  - scope:
+      path: ""
+      type: recipes
+    values:
+      layout: recipe
+      author_profile: false
+      read_time: false
+      comments: false
+      share: false
+      related: false
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+include:
+  - _pages

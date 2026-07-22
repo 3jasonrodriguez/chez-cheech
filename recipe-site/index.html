@@ -1,0 +1,42 @@
+---
+layout: default
+title: Recipes
+---
+
+<div class="recipe-search">
+  <input type="text" id="recipe-search-input" placeholder="Search by title, tag, or category…" aria-label="Search recipes">
+</div>
+
+<div class="recipe-grid" id="recipe-grid">
+  {% assign recipes = site.recipes | sort: 'title' %}
+  {% for recipe in recipes %}
+    {% include recipe-card.html recipe=recipe %}
+  {% endfor %}
+</div>
+
+<p id="recipe-empty" class="recipe-empty" style="display:none;">No recipes match that search.</p>
+
+<script>
+  const input = document.getElementById('recipe-search-input');
+  const cards = Array.from(document.querySelectorAll('.recipe-card'));
+  const empty = document.getElementById('recipe-empty');
+
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const haystack = [
+        card.dataset.title,
+        card.dataset.tags,
+        card.dataset.categories
+      ].join(' ');
+
+      const match = haystack.includes(q);
+      card.style.display = match ? '' : 'none';
+      if (match) visibleCount++;
+    });
+
+    empty.style.display = visibleCount === 0 ? '' : 'none';
+  });
+</script>

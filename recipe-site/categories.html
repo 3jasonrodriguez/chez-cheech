@@ -1,0 +1,23 @@
+---
+layout: default
+title: Browse by Category
+permalink: /categories/
+---
+
+{% assign all_categories = "" | split: "" %}
+{% for recipe in site.recipes %}
+  {% for cat in recipe.categories %}
+    {% assign all_categories = all_categories | push: cat %}
+  {% endfor %}
+{% endfor %}
+{% assign all_categories = all_categories | uniq | sort %}
+
+{% for cat in all_categories %}
+  <h2 id="{{ cat | slugify }}">{{ cat }}</h2>
+  <div class="recipe-grid">
+    {% assign matches = site.recipes | where_exp: "r", "r.categories contains cat" %}
+    {% for recipe in matches %}
+      {% include recipe-card.html recipe=recipe %}
+    {% endfor %}
+  </div>
+{% endfor %}
