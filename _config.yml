@@ -10,6 +10,7 @@ plugins:
   - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-include-cache
 
 # Recipes collection — this is where every recipe file lives
 collections:
