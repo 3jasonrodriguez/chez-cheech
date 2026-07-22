@@ -1,33 +1,31 @@
-/* Chez Cheech — Korean-Mexican street-food identity */
+/* Chez Cheech — French bistro identity */
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Jost:wght@400;500;600&family=Cormorant:wght@600&display=swap');
 
 :root {
-  --ink: #181818;
-  --paper: #FDFBF6;
-  --chili: #E0401C;
-  --lime: #8BC53F;
-  --corn: #F2B705;
-  --soju: #1F3F6E;
+  --ink: #1B3A4B;
+  --paper: #FAF6EF;
+  --wine: #7B1E3D;
+  --brass: #B08D57;
+  --line: #D9CFBE;
 }
 
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 
 h1, h2, h3, .recipe-title, .recipe-card__title {
-  font-family: 'Anton', sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .site-title {
-  font-family: 'Anton', sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+  font-family: 'Playfair Display', serif !important;
+  font-style: italic;
+  font-weight: 600 !important;
 }
 
 /* --- Search bar --- */
@@ -36,17 +34,18 @@ h1, h2, h3, .recipe-title, .recipe-card__title {
 }
 .recipe-search input {
   width: 100%;
-  padding: 0.85rem 1rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.95rem;
-  border: 3px solid var(--ink);
+  padding: 0.8rem 1rem;
+  font-family: 'Cormorant', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  border: 1px solid var(--ink);
   border-radius: 0;
   background: #fff;
   color: var(--ink);
 }
 .recipe-search input:focus {
   outline: none;
-  border-color: var(--chili);
+  border-color: var(--wine);
 }
 
 /* --- Grid --- */
@@ -57,13 +56,13 @@ h1, h2, h3, .recipe-title, .recipe-card__title {
   margin-bottom: 2rem;
 }
 
-/* --- Card: color-block stripe rotates per position, like truck livery --- */
+/* --- Card: thin tricolor rule as the signature detail, otherwise quiet --- */
 .recipe-card {
   display: block;
   background: #fff;
-  border: 3px solid var(--ink);
+  border: 1px solid var(--line);
   border-radius: 0;
-  padding: 1rem;
+  padding: 1.1rem;
   text-decoration: none;
   color: var(--ink);
   position: relative;
@@ -74,18 +73,17 @@ h1, h2, h3, .recipe-title, .recipe-card__title {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 10px;
-  background: repeating-linear-gradient(
-    -45deg,
-    var(--chili) 0, var(--chili) 12px,
-    var(--corn) 12px, var(--corn) 24px,
-    var(--lime) 24px, var(--lime) 36px,
-    var(--soju) 36px, var(--soju) 48px
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    var(--ink) 0%, var(--ink) 33.33%,
+    var(--paper) 33.33%, var(--paper) 66.66%,
+    var(--wine) 66.66%, var(--wine) 100%
   );
 }
 .recipe-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 6px 6px 0 var(--ink);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(27, 58, 75, 0.14);
 }
 
 .recipe-card__image {
@@ -94,7 +92,7 @@ h1, h2, h3, .recipe-title, .recipe-card__title {
   align-items: center;
   justify-content: center;
   background: var(--paper);
-  border: 2px solid var(--ink);
+  border: 1px solid var(--line);
   margin: 1rem 0 0.75rem;
   overflow: hidden;
 }
@@ -109,15 +107,16 @@ h1, h2, h3, .recipe-title, .recipe-card__title {
 
 .recipe-card__title {
   font-size: 1.15rem;
-  margin: 0 0 0.5rem;
-  line-height: 1.15;
+  margin: 0 0 0.4rem;
+  line-height: 1.2;
 }
 
 .recipe-card__rating,
 .recipe-rating {
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 700;
-  color: var(--chili);
+  font-family: 'Cormorant', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--brass);
   letter-spacing: 1px;
   display: block;
   margin-bottom: 0.6rem;
@@ -131,29 +130,31 @@ h1, h2, h3, .recipe-title, .recipe-card__title {
 }
 
 .chip {
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 700;
-  font-size: 0.7rem;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 0.68rem;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
-  padding: 0.25rem 0.6rem;
-  border: 2px solid var(--ink);
-  border-radius: 0;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
   text-decoration: none;
   white-space: nowrap;
 }
 .chip--category {
-  background: var(--soju);
+  background: var(--ink);
   color: #fff;
+  border-color: var(--ink);
 }
 .chip--tag {
-  background: var(--corn);
-  color: var(--ink);
+  background: #fff;
+  color: var(--wine);
+  border-color: var(--wine);
 }
 
 /* --- Single recipe page --- */
 .recipe-header {
-  border-bottom: 4px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -165,10 +166,12 @@ h1, h2, h3, .recipe-title, .recipe-card__title {
   margin: 0.5rem 0;
 }
 .recipe-description {
+  font-family: 'Cormorant', serif;
   font-style: italic;
+  font-size: 1.15rem;
   color: #4a4a4a;
 }
 .recipe-empty {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Jost', sans-serif;
   color: #777;
 }
