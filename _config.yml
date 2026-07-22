@@ -1,7 +1,7 @@
-title: Jason's Recipe Box
+title: Chez Cheech
 description: A working archive of tested recipes — ratings, notes, and what changed each time.
 url: "" # fill in once you know your GitHub Pages URL, e.g. https://<username>.github.io
-baseurl: "" # leave blank if using a user/org site (username.github.io); set to "/reponame" if using a project site
+baseurl: "/chez-cheech" # leave blank if using a user/org site (username.github.io); set to "/reponame" if using a project site
 
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "mint" # other options: default, air, aqua, contrast, dark, dirt, neon, plum, sunrise
