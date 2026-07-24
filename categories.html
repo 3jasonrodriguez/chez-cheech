@@ -4,6 +4,7 @@ title: Browse by Category
 permalink: /categories/
 ---
 
+<div class="site-content-wrap">
 {% assign all_categories = "" | split: "" %}
 {% for recipe in site.recipes %}
   {% for cat in recipe.categories %}
@@ -21,3 +22,4 @@ permalink: /categories/
     {% endfor %}
   </div>
 {% endfor %}
+</div>
