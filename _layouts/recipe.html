@@ -9,9 +9,10 @@ layout: default
     <div class="recipe-meta">
       {% if page.rating %}
       <span class="recipe-rating" aria-label="Rated {{ page.rating }} out of 5 stars">
-        {% for i in (1..5) %}
-          {% if i <= page.rating %}★{% else %}☆{% endif %}
-        {% endfor %}
+        <span class="stars" style="--rating: {{ page.rating }};">
+          <span class="stars-track stars-track--outer">★★★★★</span>
+          <span class="stars-track stars-track--inner">★★★★★</span>
+        </span>
       </span>
       {% endif %}
 
