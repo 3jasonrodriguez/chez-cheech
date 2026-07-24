@@ -4,6 +4,7 @@ title: Browse by Ingredient / Tag
 permalink: /tags/
 ---
 
+<div class="site-content-wrap">
 {% assign all_tags = "" | split: "" %}
 {% for recipe in site.recipes %}
   {% for tag in recipe.tags %}
@@ -21,3 +22,4 @@ permalink: /tags/
     {% endfor %}
   </div>
 {% endfor %}
+</div>
