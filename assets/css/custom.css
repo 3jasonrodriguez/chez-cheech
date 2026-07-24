@@ -120,14 +120,33 @@ h1, h2, h3, .recipe-title, .recipe-card__title {
 
 .recipe-card__rating,
 .recipe-rating {
-  font-family: 'Cormorant', serif;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--brass);
-  letter-spacing: 1px;
   display: block;
   margin-bottom: 0.6rem;
 }
+
+.stars {
+  position: relative;
+  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.stars-track {
+  display: block;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+.stars-track--outer {
+  color: #d6d0c4;
+}
+.stars-track--inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: var(--brass);
+  width: calc(var(--rating) / 5 * 100%);
+}
+
 
 .recipe-card__chips,
 .chip-group {
