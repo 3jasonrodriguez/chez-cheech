@@ -15,6 +15,13 @@ body {
   color: var(--ink);
   font-family: 'Jost', sans-serif;
 }
+.site
+-content-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
 
 h1, h2, h3, .recipe-title, .recipe-card__title {
   font-family: 'Playfair Display', serif;
