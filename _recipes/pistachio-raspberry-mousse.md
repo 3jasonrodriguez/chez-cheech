@@ -1,8 +1,11 @@
-Pistachio Mousse Cake with Raspberry Layer
-
-*A no-bake springform dessert: buttery graham cracker crust and a pistachio-forward mousse (no eggs), with a raspberry layer baked in.*
-
-**Rating:** 4.5 ⭐
+---
+title: Pistachio Mousse Cake with Raspberry Layer
+categories: [dessert]
+tags: [pistachio, raspberry, mousse, graham-cracker, gelatin, no-bake]
+rating: 4.5
+description: A no-bake springform dessert — buttery graham cracker crust, a set raspberry layer, and a pistachio-forward mousse (no eggs) on top. Adapted from an earlier chocolate mousse version.
+image:
+---
 
 ## Ingredients
 
@@ -31,4 +34,4 @@ Pistachio Mousse Cake with Raspberry Layer
 
 ## Changelog
 
-- **7/26/2026:** Made with raspberry as a gelled layer (crust → raspberry → mousse), full 9.95oz jar split into two gelatin batches. Layer came out too solid — too much gelatin for the texture I wanted. Pistachio increased to 1.25 cups for stronger flavor — mousse texture and taste were excellent. **Next time:** try raspberry as a warm stovetop sauce instead (no gelatin, just spread + water or lemon juice, simmered and optionally strained) — drizzle over each slice at serving rather than baking it into a layer.
+- **2026-07-26** — Made with raspberry as a gelled layer (crust → raspberry → mousse), full 9.95oz jar split into two gelatin batches. Layer came out too solid — too much gelatin for the texture I wanted. Pistachio increased to 1.25 cups for stronger flavor. Result: 4.5 stars. Mousse texture and taste were excellent. Next time: try raspberry as a warm stovetop sauce instead (no gelatin, just spread + water or lemon juice, simmered and optionally strained) — drizzle over each slice at serving rather than baking it into a layer.
